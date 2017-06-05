@@ -11,7 +11,7 @@ vm.swappiness = 1
 vm.swappiness = 1
 ```
 
-1.1 To configure swapiness to 1 permanent:
+- To configure swapiness to 1 permanently:
 
 ```
 sudo bash -c "echo 'vm.swappiness = 1' >> /etc/sysctl.conf"
@@ -19,7 +19,7 @@ sudo bash -c "echo 'vm.swappiness = 1' >> /etc/sysctl.conf"
 
 2 Show the mount attributes of all volumes
 
-2.1 Mount volume
+- Mount volume
 ```
 [root@ip-172-31-46-176 ~]# sudo mkdir -p /data/01
 [root@ip-172-31-46-176 ~]# sudo mkfs -t ext4 /dev/xvdf
@@ -28,7 +28,7 @@ sudo bash -c "echo 'vm.swappiness = 1' >> /etc/sysctl.conf"
 [root@ip-172-31-46-176 ~]# echo '/dev/xvdf /data/01 ext4 noatime 0 0' >> /etc/fstab
 ```
 
-2.2 Mount commands
+- Mount commands
 ```
 [root@ip-172-31-46-176 ~]# mount
 /dev/xvde on / type ext4 (rw)
@@ -50,4 +50,23 @@ Reserved blocks gid:      0 (group root)
 ```
 
 4. Disable transparent hugepage support
+
+
+5. List your network interface configuration
+```
+[root@ip-172-31-46-176 ~]# ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 16436 qdisc noqueue state UNKNOWN
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc pfifo_fast state UP qlen 1000
+    link/ether 0a:ed:96:65:c8:4c brd ff:ff:ff:ff:ff:ff
+    inet 172.31.46.176/20 brd 172.31.47.255 scope global eth0
+    inet6 fe80::8ed:96ff:fe65:c84c/64 scope link
+       valid_lft forever preferred_lft forever
+```
+
+
+6. List forward and reverse host lookups using getent or nslookup
 
