@@ -96,5 +96,24 @@ Non-authoritative answer:
 ```
 
 7. Show the nscd service is running
+```
+[root@ip-172-31-46-176 ~]# yum install nscd
+
+[root@ip-172-31-46-176 ~]# service nscd start
+Starting nscd:                                             [  OK  ]
+
+[root@ip-172-31-46-176 ~]# service nscd status
+nscd (pid 8413) is running...
+```
 
 8. Show the ntpd service is running
+```
+[root@ip-172-31-46-176 ~]# yum install ntp
+
+[root@ip-172-31-46-176 ~]# service ntpd start
+Starting ntpd:                                             [  OK  ]
+
+[root@ip-172-31-46-176 ~]# service ntpd status
+ntpd (pid  8472) is running...
+
+```
