@@ -70,3 +70,31 @@ Reserved blocks gid:      0 (group root)
 
 6. List forward and reverse host lookups using getent or nslookup
 
+- Install bind-utils
+```
+[root@ip-172-31-46-176 ~]# yum install bind-utils
+```
+
+- Forward 
+```
+[root@ip-172-31-46-176 ~]# nslookup ec2-52-211-52-24.eu-west-1.compute.amazonaws.com
+Server:         172.31.0.2
+Address:        172.31.0.2#53
+
+Non-authoritative answer:
+Name:   ec2-52-211-52-24.eu-west-1.compute.amazonaws.com
+Address: 172.31.46.176
+```
+- Reverse 
+```
+[root@ip-172-31-46-176 ~]# nslookup 52.211.52.24
+Server:         172.31.0.2
+Address:        172.31.0.2#53
+
+Non-authoritative answer:
+24.52.211.52.in-addr.arpa       name = ec2-52-211-52-24.eu-west-1.compute.amazonaws.com.
+```
+
+7. Show the nscd service is running
+
+8. Show the ntpd service is running
