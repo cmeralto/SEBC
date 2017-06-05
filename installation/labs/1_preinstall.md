@@ -13,11 +13,12 @@ vm.swappiness = 1
 
 1.1 To configure swapiness to 1 permanent:
 
-<code>sudo bash -c "echo 'vm.swappiness = 1' >> /etc/sysctl.conf"</code>
+```sudo bash -c "echo 'vm.swappiness = 1' >> /etc/sysctl.conf"
+```
 
-2. Show the mount attributes of all volumes
+2 Show the mount attributes of all volumes
 
-2.1 Mount volumes
+2.1 Mount volume
 ```
 [root@ip-172-31-46-176 ~]# sudo mkdir -p /data/01
 [root@ip-172-31-46-176 ~]# sudo mkfs -t ext4 /dev/xvdf
@@ -37,4 +38,15 @@ tmpfs on /dev/shm type tmpfs (rw,rootcontext="system_u:object_r:tmpfs_t:s0")
 none on /proc/sys/fs/binfmt_misc type binfmt_misc (rw)
 /dev/xvdf on /data/01 type ext4 (rw)
 ```
+
+3. Show the reserve space of any non-root, ext-based volumes 
+```
+[root@ip-172-31-46-176 ~]# tune2fs -l /dev/xvdf | grep Reserved
+Reserved block count:     0
+Reserved GDT blocks:      992
+Reserved blocks uid:      0 (user root)
+Reserved blocks gid:      0 (group root)
+```
+
+4. Disable transparent hugepage support
 
