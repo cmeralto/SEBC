@@ -50,7 +50,8 @@ Reserved blocks gid:      0 (group root)
 ```
 
 4. Disable transparent hugepage support
-
+- No transparent hugepage folder/configuration founded. OS Version: Centos 6.4
+- Please refer issue: https://github.com/cmeralto/SEBC/issues/1
 
 5. List your network interface configuration
 ```
