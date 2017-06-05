@@ -13,5 +13,5 @@ vm.swappiness = 1
 
 To configure swapiness to 1 permanent:
 
-```sudo bash -c "echo 'vm.swappiness = 1' >> /etc/sysctl.conf"
-```
+<code>sudo bash -c "echo 'vm.swappiness = 1' >> /etc/sysctl.conf"</code>
+
