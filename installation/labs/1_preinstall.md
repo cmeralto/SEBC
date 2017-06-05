@@ -28,7 +28,7 @@ sudo bash -c "echo 'vm.swappiness = 1' >> /etc/sysctl.conf"
 [root@ip-172-31-46-176 ~]# echo '/dev/xvdf /data/01 ext4 noatime 0 0' >> /etc/fstab
 ```
 
-- Mount commands
+- Mount command
 ```
 [root@ip-172-31-46-176 ~]# mount
 /dev/xvde on / type ext4 (rw)
