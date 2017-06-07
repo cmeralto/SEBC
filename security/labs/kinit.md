@@ -1,7 +1,3 @@
-```
-[cmeralto@ip-172-31-32-24 ~]$ sudo su - cmeralto
-```
-
 - kinit
 
 ```
