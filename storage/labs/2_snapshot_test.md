@@ -35,3 +35,5 @@ rm: The directory /precious cannot be deleted since /precious is snapshottable a
 Found 1 items
 -rw-r--r--   3 hdfs supergroup     449822 2017-06-06 15:22 /precious/SEBC-master.zip
 ```
+
+
