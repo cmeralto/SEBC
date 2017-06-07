@@ -1,3 +1,4 @@
+- Verify user privileges
 ```
 [root@ip-172-31-32-24 ~]# sudo su - cmeralto
 [cmeralto@ip-172-31-32-24 ~]$ kinit
