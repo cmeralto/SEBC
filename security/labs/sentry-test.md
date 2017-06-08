@@ -238,7 +238,7 @@ INFO  : OK
 4 rows selected (0.367 seconds)
 ```
 
-- kinit as ferdinand
+- ## kinit as ferdinand
 ```
 [root@ip-172-31-47-3 ~]# kinit ferdinand@CMERALTO.COM
 Password for ferdinand@CMERALTO.COM:
