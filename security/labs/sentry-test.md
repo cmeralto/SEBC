@@ -1,4 +1,4 @@
-- Verify user privileges
+- ## Verify user privileges
 ```
 [root@ip-172-31-32-24 ~]# sudo su - cmeralto
 [cmeralto@ip-172-31-32-24 ~]$ kinit
@@ -42,7 +42,7 @@ INFO  : OK
 No rows selected (0.35 seconds)
 ```
 
-- Create a Sentry role with full authorization
+- ## Create a Sentry role with full authorization
 ```
 beeline> !connect jdbc:hive2://ip-172-31-47-3.eu-west-1.compute.internal:10000/default;principal=hive/ip-172-31-47-3.eu-west-1.compute.internal@CMERALTO.COM
 scan complete in 3ms
@@ -102,20 +102,20 @@ INFO  : OK
 4 rows selected (0.595 seconds)
 ```
 
-- Create additional test users
+- ## Create additional test users
 ```
 sudo groupadd selector
 sudo groupadd inserters
 sudo useradd -u 1100 -g selector george
 sudo useradd -u 1200 -g inserters ferdinand
 
-# kadmin.local
+kadmin.local
 kadmin.local: addprinc george@CMERALTO.COM
 kadmin.local: addprinc ferdinand@CMERALTO.COM
 kadmin.local:  exit
 ```
 
-- Create test roles
+- ## Create test roles
 ```
 0: jdbc:hive2://ip-172-31-47-3.eu-west-1.comp> CREATE ROLE reads;
 INFO  : Compiling command(queryId=hive_20170608082929_ffd18f5f-7b52-486f-8902-1c1fcad990cf): CREATE ROLE reads
@@ -139,7 +139,7 @@ INFO  : OK
 No rows affected (0.133 seconds)
 ```
 
-- Grant read privilege for all tables to reads
+- ## Grant read privilege for all tables to reads
 ```
 0: jdbc:hive2://ip-172-31-47-3.eu-west-1.comp> GRANT SELECT ON DATABASE default TO ROLE reads;
 INFO  : Compiling command(queryId=hive_20170608083030_d83648cf-3ead-4394-8482-a1ae14a37c35): GRANT SELECT ON DATABASE default TO ROLE reads
@@ -163,7 +163,7 @@ INFO  : OK
 No rows affected (0.098 seconds)
 ```
 
-- Grant read privilege for default.sample07 only to 'writes'
+- ## Grant read privilege for default.sample07 only to 'writes'
 ```
 0: jdbc:hive2://ip-172-31-47-3.eu-west-1.comp> REVOKE ALL ON DATABASE default FROM ROLE writes;
 INFO  : Compiling command(queryId=hive_20170608083232_762a1060-b93e-4709-b67d-5f96146b6a01): REVOKE ALL ON DATABASE default FROM ROLE writes
@@ -197,7 +197,7 @@ INFO  : OK
 No rows affected (0.101 seconds)
 ```
 
-- kinit as george
+- ## kinit as george
 ```
 [root@ip-172-31-47-3 ~]# kinit george@CMERALTO.COM
 Password for george@CMERALTO.COM:
