@@ -1,4 +1,4 @@
-# <center>Services Enablement Boot Camp (teste)
+# <center>Services Enablement Boot Camp
 # <center> 
 
 This repository holds the course materials for Cloudera's Services
