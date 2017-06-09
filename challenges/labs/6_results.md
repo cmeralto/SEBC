@@ -6,10 +6,8 @@ GRANT ALL ON DATABASE default TO ROLE politican1;
 GRANT ROLE politican1 TO GROUP conservative;
 
 REVOKE ALL ON DATABASE default FROM ROLE politician2;
-GRANT SELECT ON default.customers TO ROLE politician2;
 GRANT SELECT ON default.sample_07 TO ROLE politician2;
 GRANT SELECT ON default.sample_08 TO ROLE politician2;
-GRANT SELECT ON default.web_logs TO ROLE politician2;
 GRANT ROLE politician2 TO GROUP labour;
 ```
 
@@ -58,10 +56,8 @@ INFO  : OK
 +------------+--+
 |  tab_name  |
 +------------+--+
-| customers  |
 | sample_07  |
 | sample_08  |
-| web_logs   |
 +------------+--+
 4 rows selected (0.31 seconds)
 ```
