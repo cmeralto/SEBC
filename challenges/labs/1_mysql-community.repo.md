@@ -1,4 +1,4 @@
-´´´
+```
 [root@ip-172-31-20-160 yum.repos.d]# cat mysql-community.repo
 [mysql-connectors-community]
 name=MySQL Connectors Community
@@ -64,4 +64,4 @@ baseurl=http://repo.mysql.com/yum/mysql-cluster-7.6-community/el/6/$basearch/
 enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
-´´´
+```
